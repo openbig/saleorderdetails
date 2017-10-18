@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <template id="report_saleorder_detailed" inherit_id="sale.report_saleorder_document" primary="True">
+      <xpath expr="//p[@id='fiscal_position_remark']" position="after">
+        <div style="page-break-before: always;"/>
+        <strong style="padding: 4px;">Product Details Description</strong>
+        <div width="100%" style="border-bottom: 1px solid black"/>
+        <table class="table table-bordered">
+          <tr t-foreach="doc.order_line" t-as="order_line">
+            <td class="col-xs-2">
+              <t t-if="order_line.product_id.default_code"><span t-field="order_line.product_id.default_code"/></t>
+              <t t-if="not order_line.product_id.default_code"><span t-field="order_line.product_id"/></t>
+            </td>
+            <td class="col-xs-10">
+              <span t-field="order_line.purchase_description"/>
+            </td>
+          </tr>
+        </table>
+        <!-- <t t-foreach="doc.order_line" t-as="order_line">
+          <div style="margin: 4px;"><span t-field="order_line.name"/></div>
+          <div style="margin: 4px 4px 4px 12px;"><span t-field="order_line.purchase_description"/></div>
+          <div width="100%" style="border-bottom: 1px solid lightgrey"/>
+        </t> -->
+      </xpath>
+    </template>
+
+    <template id="report_saleorder_details">
+      <t t-call="report.html_container">
+        <t t-foreach="docs" t-as="doc">
+          <t t-call="sale_productdetails.report_saleorder_detailed" t-lang="doc.partner_id.lang"/>
+        </t>
+      </t>
+    </template>
+
+    <report id="report_sale_order_detailed"
+            model="sale.order"
+            string="Quotation / Sale Order (Details)"
+            name="sale_productdetails.report_saleorder_details"
+            report_type="qweb-pdf"/>
+  </data>
+</odoo>
