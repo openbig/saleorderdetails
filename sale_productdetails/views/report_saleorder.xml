@@ -6,22 +6,16 @@
         <div style="page-break-before: always;"/>
         <strong style="padding: 4px;">Product Details Description</strong>
         <div width="100%" style="border-bottom: 1px solid black"/>
-        <table class="table table-bordered">
-          <tr t-foreach="doc.order_line" t-as="order_line">
-            <td class="col-xs-2">
-              <t t-if="order_line.product_id.default_code"><span t-field="order_line.product_id.default_code"/></t>
-              <t t-if="not order_line.product_id.default_code"><span t-field="order_line.product_id"/></t>
-            </td>
-            <td class="col-xs-10">
-              <span t-field="order_line.purchase_description"/>
-            </td>
-          </tr>
-        </table>
-        <!-- <t t-foreach="doc.order_line" t-as="order_line">
-          <div style="margin: 4px;"><span t-field="order_line.name"/></div>
-          <div style="margin: 4px 4px 4px 12px;"><span t-field="order_line.purchase_description"/></div>
+        <t t-foreach="doc.order_line" t-as="order_line">
+          <div style="margin: 4px; font-weight:bold;">
+            <t t-if="order_line.product_id.default_code">
+              <span t-field="order_line.product_id.default_code"/></t>
+            <t t-if="not order_line.product_id.default_code">
+              <span t-field="order_line.product_id"/></t>
+          </div>
+          <div style="margin: 4px;"><span t-field="order_line.purchase_description"/></div>
           <div width="100%" style="border-bottom: 1px solid lightgrey"/>
-        </t> -->
+        </t>
       </xpath>
     </template>
 
