@@ -25,7 +25,7 @@
     "website": "https://www.openbig.org",
     "category" : "Sale",
     'summary': 'New report for Sale Order with detailed product description',
-    'depends' : ['sale', 'purchase'],
+    'depends' : ['sale'],
     'description':"""
 ====================
 Detailed description
