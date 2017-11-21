@@ -35,7 +35,8 @@ Detailed description
 
 This module adds field, functionality and new report
 required to show detailed description for product
-on Sale Order report.
+on Sale Order report. Furthermore a feature to activate 
+image printing was integrated.
 
 Fields:
 -------

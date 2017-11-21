@@ -22,7 +22,7 @@
         </xpath>
         <field name="payment_term_id" position="after">
                 <field name="print_image"/>
-                <field name="image_sizes"/>
+                <field name="image_sizes" invisible="1"/>
         </field>
       </field>
     </record>
