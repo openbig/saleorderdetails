@@ -26,5 +26,6 @@ class SaleOrderLine(models.Model):
     purchase_description = fields.Text("Detailed Description")
 
     @api.onchange('product_id')
+    
     def onchange_product_for_description(self):
         self.purchase_description = self.product_id and self.product_id.description_purchase or False
