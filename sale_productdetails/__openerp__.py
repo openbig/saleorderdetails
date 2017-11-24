@@ -22,12 +22,12 @@
 ##############################################################################
 {
     "name": "Detailed product description on Sale Order report.",
-    "version": "0.02 (9.0)",
+    "version": "0.03 (9.0)",
     "author": "Thorsten Vocks - OpenBIG.org, Maciej Wichowski - OpenGLOBE",
     "website": "https://www.openbig.org",
     "category": "Sale",
     'summary': 'New report for Sale Order with detailed product description',
-    'depends' : ['sale'],
+    'depends': ['sale_layout', 'web_tree_image'],
     'description': """
 ====================
 Detailed description
@@ -35,7 +35,8 @@ Detailed description
 
 This module adds field, functionality and new report
 required to show detailed description for product
-on Sale Order report.
+on Sale Order report. Furthermore a feature to activate 
+image printing was integrated.
 
 Fields:
 -------

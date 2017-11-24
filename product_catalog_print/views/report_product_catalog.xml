@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 Carlos Dauden <carlos.dauden@tecnativa.com>
+     Copyright 2017 Thorsten Vocks <thorsten.vocks@openbig.org>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+<template id="report_product_catalog_document">
+    <t t-call="report.html_container">
+        <t t-call="report.external_layout">
+            <div class="page">
+                <h2>Product Catalog</h2>
+                <div class="row mt32 mb32">
+                    <div class="col-xs-3">
+                        <strong>Print date</strong>:<br/>
+                        <t t-esc="time.strftime('%Y-%m-%d')"/>
+                    </div>
+		    		<div t-if="o.show_list_price or o.show_sale_price" class="col-xs-3">
+                    	<strong>Currency</strong>:<br/>
+                    	<span t-field="o.pricelist_id.currency_id"/>
+            		</div>
+		    		<div t-if="o.partner_id" class="col-xs-3">
+			    		<strong>Customer</strong>:<br/>                        
+			    		<span t-field="o.partner_id.name"/>
+            		</div>
+				</div>
+        		<div width="100%" style="border-bottom: 1px solid white;"/>
+		<t t-set="nbr_page" t-value="0"/>
+            	<t t-foreach="o.product_ids or o.product_tmpl_ids.mapped('product_variant_ids')" t-as="product">
+		    <div t-if="o.show_image and nbr_page_two" style="page-break-before:always;"/>
+		    <div class="row">
+                    <div class="col-xs-6" style="font-weight:bold; font-size:16px;">
+                        <t t-if="o.pricelist_id">
+                        	<span t-field="product.display_name"/>
+                        </t>
+                    </div>
+                    <div class="col-xs-3" style="font-weight:bold; font-size:16px;">
+                        <t t-if="o.show_sale_price">
+                            <span>Sale Price: </span>
+			    <span t-field="product.with_context(pricelist=o.pricelist_id.id).price"/>
+                        </t>
+                    </div>
+                    <div class="col-xs-3" style="font-weight:bold; font-size:16px;">
+                        <t t-if="o.pricelist_id and o.show_list_price">
+                            <span>List Price: </span>
+			    <span t-field="product.list_price"/>
+                        </t>
+                    </div>
+                </div>
+                <div class="row col-xs-12"> 
+                    <div class="mt8">
+                        <t t-if="o.show_image">
+                            <span t-field="product.image" t-field-options="{&quot;widget&quot;: &quot;image&quot;, &quot;class&quot;: &quot;img-rounded&quot;}"/>
+                        </t>
+                    </div>
+                    <div class="mt8">
+                        <span t-field="product.description_purchase"/>
+                    </div>
+                    <div t-if="o.show_image" style="margin-top: 8px; margin-bottom: 8px; border-bottom: 1px solid lightgrey; page-break-after: important;"/>
+                    <div t-if="not o.show_image" style="margin-top: 8px; margin-bottom: 8px; border-bottom: 1px solid lightgrey;"/>
+		    <p>
+			<t t-set="nbr_page_two" t-value="nbr_page+1"/> 
+		    </p>
+		</div>	
+	            </t>
+            </div>
+    	</t>
+    </t>
+</template>
+
+<template id="report_product_catalog">
+    <t t-foreach="docs" t-as="o">
+        <t t-call="product_catalog_print.report_product_catalog_document"
+           t-lang="o.env.user.lang"/>
+    </t>
+</template>
+
+<report
+    id="action_report_product_catalog"
+    model="product.catalog.print"
+    string="Product Catalog"
+    report_type="qweb-pdf"
+    name="product_catalog_print.report_product_catalog"
+    file="product_catalog_print.report_product_catalog"
+/>
+
+</odoo>

@@ -3,19 +3,25 @@
   <data>
     <template id="report_saleorder_detailed" inherit_id="sale.report_saleorder_document" primary="True">
       <xpath expr="//p[@id='fiscal_position_remark']" position="after">
-        <div style="page-break-before: always;"/>
-        <strong style="padding: 4px;">Product Details Description</strong>
-        <div width="100%" style="border-bottom: 1px solid black"/>
-        <t t-foreach="doc.order_line" t-as="order_line">
-          <div style="margin: 4px; font-weight:bold;">
-            <t t-if="order_line.product_id.default_code">
-              <span t-field="order_line.product_id.default_code"/></t>
-            <t t-if="not order_line.product_id.default_code">
-              <span t-field="order_line.product_id"/></t>
-          </div>
-          <div style="margin: 4px;"><span t-field="order_line.purchase_description"/></div>
-          <div width="100%" style="border-bottom: 1px solid lightgrey"/>
-        </t>
+          <div style="page-break-before: always;"/>
+          <strong style="padding: 4px;">Product Details</strong>
+          <div width="100%" style="border-bottom: 1px solid black"/>
+          <t t-foreach="doc.order_line" t-as="order_line">
+              <div style="margin: 4px; font-weight:bold;">
+                  <t t-if="order_line.product_id.default_code">
+                      <span t-field="order_line.product_id.default_code"/></t>
+                  <t t-if="not order_line.product_id.default_code">
+                      <span t-field="order_line.product_id"/></t>
+              </div>
+              <div style="margin: 4px;">
+                  <t t-if="doc.image_sizes == 'image' and doc.print_image ">
+                      <span t-field="order_line.product_id.image" t-field-options="{&quot;widget&quot;: &quot;image&quot;, &quot;class&quot;: &quot;img-rounded&quot;}"/>
+                  </t>
+              </div>
+              <div style="margin: 4px;"><span t-field="order_line.purchase_description"/></div>
+              <div t-if="doc.print_image" width="100%" style="border-bottom: 1px solid lightgrey; page-break-after: always"/>
+              <div t-if="not doc.print_image" width="100%" style="border-bottom: 1px solid lightgrey;"/>
+          </t>
       </xpath>
     </template>
 

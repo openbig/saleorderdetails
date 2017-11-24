@@ -14,6 +14,16 @@
           <label for="purchase_description"/>
           <field name="purchase_description"/>
         </xpath>
+        <xpath expr="//field[@name='order_line']/form//field[@name='product_id']" position="before">
+          <field name="image_small" widget="image"/>
+        </xpath>
+        <xpath expr="//field[@name='order_line']/tree/field[@name='product_id']" position="before">
+          <field name="image_small" widget="image"/>
+        </xpath>
+        <field name="payment_term_id" position="after">
+                <field name="print_image"/>
+                <field name="image_sizes" invisible="1"/>
+        </field>
       </field>
     </record>
   </data>

@@ -1,0 +1,166 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* product_catalog_print
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-24 10:44+0000\n"
+"PO-Revision-Date: 2017-11-24 10:44+0000\n"
+"Last-Translator: Thorsten Vocks (OpenBIG.org)<thorsten.vocks@openbig.org>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: product_catalog_print
+#: model:ir.ui.view,arch_db:product_catalog_print.report_product_catalog_document
+msgid "<span>List Price: </span>"
+msgstr "<span>Listen-Preis: </span>"
+
+#. module: product_catalog_print
+#: model:ir.ui.view,arch_db:product_catalog_print.report_product_catalog_document
+msgid "<span>Sale Price: </span>"
+msgstr "<span>VK-Preis: </span>"
+
+#. module: product_catalog_print
+#: model:ir.ui.view,arch_db:product_catalog_print.report_product_catalog_document
+msgid "<strong>Currency</strong>:<br/>"
+msgstr "<strong>Währung</strong>:<br/>"
+
+#. module: product_catalog_print
+#: model:ir.ui.view,arch_db:product_catalog_print.report_product_catalog_document
+msgid "<strong>Customer</strong>:<br/>"
+msgstr "<strong>Kunde</strong>:<br/>"
+
+#. module: product_catalog_print
+#: model:ir.ui.view,arch_db:product_catalog_print.report_product_catalog_document
+msgid "<strong>Print date</strong>:<br/>"
+msgstr "<strong>Gedruckt am</strong>:<br/>"
+
+#. module: product_catalog_print
+#: model:ir.ui.view,arch_db:product_catalog_print.view_product_pricelist_print
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#. module: product_catalog_print
+#: model:ir.model.fields,field_description:product_catalog_print.field_product_catalog_print_create_uid
+msgid "Created by"
+msgstr "Erstellt durch"
+
+#. module: product_catalog_print
+#: model:ir.model.fields,field_description:product_catalog_print.field_product_catalog_print_create_date
+msgid "Created on"
+msgstr "Erstellt am"
+
+#. module: product_catalog_print
+#: model:ir.model.fields,field_description:product_catalog_print.field_product_catalog_print_partner_id
+msgid "Customer"
+msgstr "Kunde"
+
+#. module: product_catalog_print
+#: model:ir.model.fields,field_description:product_catalog_print.field_product_catalog_print_display_name
+msgid "Display Name"
+msgstr "Anzeige"
+
+#. module: product_catalog_print
+#: model:ir.ui.view,arch_db:product_catalog_print.view_product_pricelist_print
+msgid "Filter Options"
+msgstr "Filter Optionen"
+
+#. module: product_catalog_print
+#: model:ir.model.fields,field_description:product_catalog_print.field_product_catalog_print_id
+msgid "ID"
+msgstr "ID"
+
+#. module: product_catalog_print
+#: model:ir.model.fields,help:product_catalog_print.field_product_catalog_print_product_ids
+#: model:ir.model.fields,help:product_catalog_print.field_product_catalog_print_product_tmpl_ids
+msgid "Keep empty for all products"
+msgstr "Leer lassen, für alle Produkte"
+
+#. module: product_catalog_print
+#: model:ir.model.fields,field_description:product_catalog_print.field_product_catalog_print___last_update
+msgid "Last Modified on"
+msgstr "Geändert am"
+
+#. module: product_catalog_print
+#: model:ir.model.fields,field_description:product_catalog_print.field_product_catalog_print_write_uid
+msgid "Last Updated by"
+msgstr "Aktualisiert durch"
+
+#. module: product_catalog_print
+#: model:ir.model.fields,field_description:product_catalog_print.field_product_catalog_print_write_date
+msgid "Last Updated on"
+msgstr "Aktualisiert am"
+
+#. module: product_catalog_print
+#: model:ir.model.fields,field_description:product_catalog_print.field_product_catalog_print_pricelist_id
+#: model:ir.ui.view,arch_db:product_catalog_print.view_product_pricelist_print
+msgid "Pricelist"
+msgstr "Preisliste"
+
+#. module: product_catalog_print
+#: model:ir.ui.view,arch_db:product_catalog_print.view_product_pricelist_print
+msgid "Print"
+msgstr "Drucken"
+
+#. module: product_catalog_print
+#: model:ir.actions.act_window,name:product_catalog_print.action_catalog_print
+#: model:ir.ui.menu,name:product_catalog_print.menu_product_catalog_print
+msgid "Print Catalog"
+msgstr "Produktkatalog drucken"
+
+#. module: product_catalog_print
+#: model:ir.actions.act_window,name:product_catalog_print.action_partner_product_catalog_print
+#: model:ir.actions.act_window,name:product_catalog_print.action_product_catalog_print
+#: model:ir.actions.act_window,name:product_catalog_print.action_product_product_catalog_print
+#: model:ir.actions.act_window,name:product_catalog_print.action_product_template_catalog_print
+#: model:ir.actions.report.xml,name:product_catalog_print.action_report_product_catalog
+#: model:ir.ui.view,arch_db:product_catalog_print.report_product_catalog_document
+msgid "Product Catalog"
+msgstr "Produktkatalog"
+
+#. module: product_catalog_print
+#: model:ir.model.fields,field_description:product_catalog_print.field_product_catalog_print_product_ids
+#: model:ir.model.fields,field_description:product_catalog_print.field_product_catalog_print_product_tmpl_ids
+msgid "Products"
+msgstr "Produkte"
+
+#. module: product_catalog_print
+#: model:ir.ui.view,arch_db:product_catalog_print.view_product_pricelist_print
+msgid "Products Selection"
+msgstr "Produktselektion"
+
+#. module: product_catalog_print
+#: model:ir.model.fields,field_description:product_catalog_print.field_product_catalog_print_show_image
+msgid "Show Image"
+msgstr "Bild anzeigen"
+
+#. module: product_catalog_print
+#: model:ir.model.fields,field_description:product_catalog_print.field_product_catalog_print_show_list_price
+msgid "Show List Price"
+msgstr "Listenpreis anzeigen"
+
+#. module: product_catalog_print
+#: model:ir.model.fields,field_description:product_catalog_print.field_product_catalog_print_show_sale_price
+msgid "Show Sale Price"
+msgstr "VK-Preis anzeigen"
+
+#. module: product_catalog_print
+#: model:ir.model.fields,field_description:product_catalog_print.field_product_catalog_print_show_variants
+msgid "Show variants"
+msgstr "Varianten anzeigen"
+
+#. module: product_catalog_print
+#: code:addons/product_catalog_print/wizards/product_catalog_print.py:58
+#, python-format
+msgid "You must set price list or any show price option."
+msgstr "Sie müssen eine Preisliste oder eine Preisanzeige Option wählen."
+
+#. module: product_catalog_print
+#: model:ir.model,name:product_catalog_print.model_product_catalog_print
+msgid "product.catalog.print"
+msgstr ""

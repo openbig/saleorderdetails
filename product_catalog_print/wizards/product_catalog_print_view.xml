@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 Carlos Dauden <carlos.dauden@tecnativa.com>
+     Copyright 2017 Thorsten Vocks <thorsten.vocks@openbig.org>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+<record id="view_product_pricelist_print" model="ir.ui.view">
+      <field name="name">Product catalog print</field>
+      <field name="model">product.catalog.print</field>
+      <field name="arch" type="xml">
+        <form>
+            <group string="Pricelist" invisible="context.get('active_model') in ('product.pricelist', 'res.partner')">
+                <field name="pricelist_id" widget="selection" options="{'no_create': True}"/>
+            </group>
+            <group string="Filter Options" colspan="4">
+                <field name="show_sale_price"/>
+		<field name="show_list_price"/>
+                <field name="show_image"/>
+                <field name="show_variants" groups="product.group_product_variant"/>
+            </group>
+            <group string="Products Selection"
+                   invisible="context.get('active_model') in ['product.template','product.product']">
+                <field name="product_tmpl_ids" colspan="4" nolabel="1"
+                       attrs="{'invisible':[('show_variants','=',True)]}">
+                    <tree>
+                        <field name="name"/>
+                    </tree>
+                </field>
+                <field name="product_ids" colspan="4" nolabel="1"
+                       attrs="{'invisible':[('show_variants','=',False)]}">
+                    <tree>
+                        <field name="name"/>
+                    </tree>
+                </field>
+            </group>
+            <footer>
+                <button name="print_report" string="Print"  type="object" class="btn-primary"/>
+                <button string="Cancel" class="btn-default" special="cancel" />
+            </footer>
+        </form>
+      </field>
+</record>
+
+<act_window id="action_product_template_catalog_print"
+    key2="client_print_multi"
+    name="Product Catalog"
+    res_model="product.catalog.print"
+    src_model="product.template"
+    groups="product.group_sale_pricelist"
+    view_mode="form" target="new" view_type="form"/>
+
+<act_window id="action_product_product_catalog_print"
+    key2="client_print_multi"
+    name="Product Catalog"
+    res_model="product.catalog.print"
+    src_model="product.product"
+    groups="product.group_sale_pricelist"
+    view_mode="form" target="new" view_type="form"/>
+
+<act_window id="action_product_catalog_print"
+    key2="client_print_multi"
+    name="Product Catalog"
+    res_model="product.catalog.print"
+    src_model="product.pricelist"
+    groups="product.group_sale_pricelist"
+    view_mode="form" target="new" view_type="form"/>
+
+<act_window id="action_partner_product_catalog_print"
+    key2="client_print_multi"
+    name="Product Catalog"
+    res_model="product.catalog.print"
+    src_model="res.partner"
+    groups="product.group_sale_pricelist"
+    view_mode="form" target="new" view_type="form"/>
+
+<act_window id="action_catalog_print"
+    name="Print Catalog"
+    res_model="product.catalog.print"
+    groups="product.group_sale_pricelist"
+    view_mode="form" target="new" view_type="form"/>
+
+<menuitem action="action_catalog_print" id="menu_product_catalog_print"
+    parent="base.menu_sales" sequence="300" groups="product.group_sale_pricelist"/>
+
+</odoo>
