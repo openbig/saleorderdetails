@@ -1,0 +1,172 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* product_pricelist_print
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-24 11:23+0000\n"
+"PO-Revision-Date: 2017-11-24 11:23+0000\n"
+"Last-Translator: Thorsten Vocks (OpenBIG.org)<thorsten.vocks@openbig.org>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: product_pricelist_print
+#: model:ir.ui.view,arch_db:product_pricelist_print.report_product_pricelist_document
+msgid "<strong>Cost Price</strong>"
+msgstr "<strong>Standard-Preis</strong>"
+
+#. module: product_pricelist_print
+#: model:ir.ui.view,arch_db:product_pricelist_print.report_product_pricelist_document
+msgid "<strong>Currency</strong>:<br/>"
+msgstr "<strong>Währung</strong>:<br/>"
+
+#. module: product_pricelist_print
+#: model:ir.ui.view,arch_db:product_pricelist_print.report_product_pricelist_document
+msgid "<strong>Description</strong>"
+msgstr "<strong>Beschreibung:</strong>"
+
+#. module: product_pricelist_print
+#: model:ir.ui.view,arch_db:product_pricelist_print.report_product_pricelist_document
+msgid "<strong>List Price</strong>"
+msgstr "<strong>Listen-Preis</strong>"
+
+#. module: product_pricelist_print
+#: model:ir.ui.view,arch_db:product_pricelist_print.report_product_pricelist_document
+msgid "<strong>Price List Name</strong>:<br/>"
+msgstr "<strong>Preislistenbezeichnung</strong>:<br/>"
+
+#. module: product_pricelist_print
+#: model:ir.ui.view,arch_db:product_pricelist_print.report_product_pricelist_document
+msgid "<strong>Print date</strong>:<br/>"
+msgstr "<strong>Druckdatum</strong>:<br/>"
+
+#. module: product_pricelist_print
+#: model:ir.ui.view,arch_db:product_pricelist_print.report_product_pricelist_document
+msgid "<strong>Sale Price</strong>"
+msgstr "<strong>VK-Preis</strong>"
+
+#. module: product_pricelist_print
+#: model:ir.ui.view,arch_db:product_pricelist_print.view_product_pricelist_print
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#. module: product_pricelist_print
+#: model:ir.model.fields,field_description:product_pricelist_print.field_product_pricelist_print_create_uid
+msgid "Created by"
+msgstr "Erstellt von"
+
+#. module: product_pricelist_print
+#: model:ir.model.fields,field_description:product_pricelist_print.field_product_pricelist_print_create_date
+msgid "Created on"
+msgstr "Erstellt am"
+
+#. module: product_pricelist_print
+#: model:ir.model.fields,field_description:product_pricelist_print.field_product_pricelist_print_partner_id
+msgid "Customer"
+msgstr "Kunde"
+
+#. module: product_pricelist_print
+#: model:ir.model.fields,field_description:product_pricelist_print.field_product_pricelist_print_display_name
+msgid "Display Name"
+msgstr "Angezeigter Name"
+
+#. module: product_pricelist_print
+#: model:ir.ui.view,arch_db:product_pricelist_print.view_product_pricelist_print
+msgid "Filter Options"
+msgstr "Filter Optionen"
+
+#. module: product_pricelist_print
+#: model:ir.model.fields,field_description:product_pricelist_print.field_product_pricelist_print_id
+msgid "ID"
+msgstr "ID"
+
+#. module: product_pricelist_print
+#: model:ir.model.fields,help:product_pricelist_print.field_product_pricelist_print_product_ids
+#: model:ir.model.fields,help:product_pricelist_print.field_product_pricelist_print_product_tmpl_ids
+msgid "Keep empty for all products"
+msgstr "Zur Anzeige aller Produkte leer lassen"
+
+#. module: product_pricelist_print
+#: model:ir.model.fields,field_description:product_pricelist_print.field_product_pricelist_print___last_update
+msgid "Last Modified on"
+msgstr "Geändert am"
+
+#. module: product_pricelist_print
+#: model:ir.model.fields,field_description:product_pricelist_print.field_product_pricelist_print_write_uid
+msgid "Last Updated by"
+msgstr "Aktualisiert durch"
+
+#. module: product_pricelist_print
+#: model:ir.model.fields,field_description:product_pricelist_print.field_product_pricelist_print_write_date
+msgid "Last Updated on"
+msgstr "Aktualisiert am"
+
+#. module: product_pricelist_print
+#: model:ir.actions.act_window,name:product_pricelist_print.action_partner_pricelist_print
+#: model:ir.actions.act_window,name:product_pricelist_print.action_product_pricelist_print
+#: model:ir.actions.act_window,name:product_pricelist_print.action_product_product_pricelist_print
+#: model:ir.actions.act_window,name:product_pricelist_print.action_product_template_pricelist_print
+#: model:ir.ui.view,arch_db:product_pricelist_print.report_product_pricelist_document
+msgid "Price List"
+msgstr "Preisliste"
+
+#. module: product_pricelist_print
+#: model:ir.model.fields,field_description:product_pricelist_print.field_product_pricelist_print_pricelist_id
+#: model:ir.ui.view,arch_db:product_pricelist_print.view_product_pricelist_print
+msgid "Pricelist"
+msgstr "Preisliste"
+
+#. module: product_pricelist_print
+#: model:ir.ui.view,arch_db:product_pricelist_print.view_product_pricelist_print
+msgid "Print"
+msgstr "Drucken"
+
+#. module: product_pricelist_print
+#: model:ir.actions.act_window,name:product_pricelist_print.action_pricelist_print
+#: model:ir.ui.menu,name:product_pricelist_print.menu_product_pricelist_print
+msgid "Print Price List"
+msgstr "Preisliste drucken"
+
+#. module: product_pricelist_print
+#: model:ir.actions.report.xml,name:product_pricelist_print.action_report_product_pricelist
+msgid "Product Price List"
+msgstr "Produktpreisliste"
+
+#. module: product_pricelist_print
+#: model:ir.model.fields,field_description:product_pricelist_print.field_product_pricelist_print_product_ids
+#: model:ir.model.fields,field_description:product_pricelist_print.field_product_pricelist_print_product_tmpl_ids
+#: model:ir.ui.view,arch_db:product_pricelist_print.view_product_pricelist_print
+msgid "Products"
+msgstr "Produkte"
+
+#. module: product_pricelist_print
+#: model:ir.model.fields,field_description:product_pricelist_print.field_product_pricelist_print_show_standard_price
+msgid "Show Cost Price"
+msgstr "Sandard-Preis anzeigen"
+
+#. module: product_pricelist_print
+#: model:ir.model.fields,field_description:product_pricelist_print.field_product_pricelist_print_show_sale_price
+msgid "Show Sale Price"
+msgstr "VK-Preis anzeigen"
+
+#. module: product_pricelist_print
+#: model:ir.model.fields,field_description:product_pricelist_print.field_product_pricelist_print_show_variants
+msgid "Show variants"
+msgstr "Varianten anzeigen"
+
+#. module: product_pricelist_print
+#: code:addons/product_pricelist_print/wizards/product_pricelist_print.py:58
+#, python-format
+msgid "You must set price list or any show price option."
+msgstr "Wählen Sie ziwngend eine Preisliste oder eine Preisanzeige Option."
+
+#. module: product_pricelist_print
+#: model:ir.model,name:product_pricelist_print.model_product_pricelist_print
+msgid "product.pricelist.print"
+msgstr "product.pricelist.print"
+
