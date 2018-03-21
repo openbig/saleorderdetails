@@ -56,9 +56,9 @@
                     <div class="mt8">
                         <span t-field="product.description_purchase"/>
                     </div>
-                </div>
-                <p style="page-break-after:always!important;color:white">..... </p>  
+                </div> 
                 </t>
+            <p style="page-break-after:always!important;color:white">..... </p> 
             </div>
         </t>
     </t>
