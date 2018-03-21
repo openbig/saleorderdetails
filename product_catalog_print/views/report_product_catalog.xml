@@ -56,9 +56,7 @@
                     <div class="mt8">
                         <span t-field="product.description_purchase"/>
                     </div>
-                    <div t-if="o.show_image" style="margin-top: 8px; margin-bottom: 8px; border-bottom: 1px solid lightgrey; page-break-after: important;"/>
-                    <div t-if="not o.show_image" style="margin-top: 8px; margin-bottom: 8px; border-bottom: 1px solid lightgrey;"/>
-            <p style="page-break-after: important;color:white">..... </p>
+            <p style="page-break-after:always!important;color:white">..... </p>
         </div>  
                 </t>
             </div>
