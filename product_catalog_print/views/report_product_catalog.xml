@@ -18,43 +18,44 @@
 		    		    <div t-if="o.show_list_price or o.show_sale_price" class="col-xs-12 text-center">
                     	   <strong>Currency</strong>:<br/>
                     	   <span t-field="o.pricelist_id.currency_id"/>
-            		  </div>
+            		    </div>
 		    		    <div t-if="o.partner_id" class="col-xs-12 text-center">
 			    		   <strong>Customer</strong>:<br/>                        
 			    		   <span t-field="o.partner_id.name"/>
-            		  </div>
-				    </div>
-                </div>
-                <p style="page-break-after:always!important; color:white">. </p>
-            	<t t-foreach="o.product_ids or o.product_tmpl_ids.mapped('product_variant_ids')" t-as="product">
-                    <div t-if="o.show_image"/>
-		              <div class="row">
-                        <div class="col-xs-6" style="font-weight:bold; font-size:16px;">
-                            <t t-if="o.pricelist_id">
-                        	   <span t-field="product.display_name"/>
-                            </t>
-                        </div>
-                        <div class="col-xs-3" style="font-weight:bold; font-size:16px;">
-                            <t t-if="o.show_sale_price">
-                                <span>Sale Price: </span>
-                                <span t-field="product.with_context(pricelist=o.pricelist_id.id).price"/>
-                            </t>
-                        </div>
-                        <div class="col-xs-3" style="font-weight:bold; font-size:16px;">
-                            <t t-if="o.pricelist_id and o.show_list_price">
-                                <span>List Price: </span>
-                                <span t-field="product.list_price"/>
-                            </t>
                         </div>
                     </div>
-                    <div class="row col-xs-12"> 
-                        <div class="mt8">
-                            <t t-if="o.show_image">
-                                <span t-field="product.image" t-field-options="{&quot;widget&quot;: &quot;image&quot;, &quot;class&quot;: &quot;img-rounded&quot;}"/>
-                            </t>
+                </div>
+                <p style="page-break-after:always!important; color:white">..... </p>
+            	<t t-foreach="o.product_ids or o.product_tmpl_ids.mapped('product_variant_ids')" t-as="product">
+                    <div t-if="o.show_image"/>
+		                <div class="row">
+                            <div class="col-xs-6" style="font-weight:bold; font-size:16px;">
+                                <t t-if="o.pricelist_id">
+                        	    <span t-field="product.display_name"/>
+                                </t>
+                            </div>
+                            <div class="col-xs-3" style="font-weight:bold; font-size:16px;">
+                                <t t-if="o.show_sale_price">
+                                <span>Sale Price: </span>
+                                <span t-field="product.with_context(pricelist=o.pricelist_id.id).price"/>
+                                </t>
+                            </div>
+                            <div class="col-xs-3" style="font-weight:bold; font-size:16px;">
+                                <t t-if="o.pricelist_id and o.show_list_price">
+                                <span>List Price: </span>
+                                <span t-field="product.list_price"/>
+                                </t>
+                            </div>
                         </div>
-                        <div class="mt8">
-                            <span t-field="product.description_purchase"/>
+                        <div class="row col-xs-12"> 
+                            <div class="mt8">
+                                <t t-if="o.show_image">
+                                <span t-field="product.image" t-field-options="{&quot;widget&quot;: &quot;image&quot;, &quot;class&quot;: &quot;img-rounded&quot;}"/>
+                                </t>
+                            </div>
+                            <div class="mt8">
+                                <span t-field="product.description_purchase"/>
+                            </div>
                         </div>
                     </div>
                 <p style="page-break-after:always!important; color:white">. </p>
