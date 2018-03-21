@@ -26,24 +26,24 @@
                 </div>
             </div>
             <p style="page-break-after:always!important; color:white">..... </p>
-                <t t-foreach="o.product_ids or o.product_tmpl_ids.mapped('product_variant_ids')" t-as="product">
+            <t t-foreach="o.product_ids or o.product_tmpl_ids.mapped('product_variant_ids')" t-as="product">
             <div t-if="o.show_image"/>
             <div class="row">
-                    <div class="col-xs-6" style="font-weight:bold; font-size:16px;">
-                        <t t-if="o.pricelist_id">
-                            <span t-field="product.display_name"/>
-                        </t>
-                    </div>
+                <div class="col-xs-6" style="font-weight:bold; font-size:16px;">
+                    <t t-if="o.pricelist_id">
+                        <span t-field="product.display_name"/>
+                    </t>
+                </div>
                     <div class="col-xs-3" style="font-weight:bold; font-size:16px;">
                         <t t-if="o.show_sale_price">
                             <span>Sale Price: </span>
-                <span t-field="product.with_context(pricelist=o.pricelist_id.id).price"/>
+                            <span t-field="product.with_context(pricelist=o.pricelist_id.id).price"/>
                         </t>
                     </div>
                     <div class="col-xs-3" style="font-weight:bold; font-size:16px;">
                         <t t-if="o.pricelist_id and o.show_list_price">
                             <span>List Price: </span>
-                <span t-field="product.list_price"/>
+                            <span t-field="product.list_price"/>
                         </t>
                     </div>
                 </div>
@@ -55,11 +55,11 @@
                     </div>
                     <div class="mt8">
                         <span t-field="product.description_purchase"/>
-                    </div>
-                </div> 
-                </t>
+                    </div> 
+                </div>
+                <p style="page-break-after:always!important; color:white">............. </p>
+            </t>
             </div>
-            <p style="page-break-after:always!important;color:white">..... </p> 
         </t>
     </t>
 </template>
