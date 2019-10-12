@@ -26,9 +26,9 @@
     "author": "Thorsten Vocks - OpenBIG.org, Maciej Wichowski - OpenGLOBE",
     "website": "https://www.openbig.org",
     "category": "Sale",
-    'summary': 'New report for Sale Order with detailed product description',
-    'depends': ['sale_layout', 'web_tree_image'],
-    'description': """
+    "summary": "New report for Sale Order with detailed product description",
+    "depends": ["sale_layout", "web_tree_image"],
+    "description": """
 ====================
 Detailed description
 ====================
@@ -48,11 +48,8 @@ Reports:
 * **Quotation / Sale Order (Details)**
 
 """,
-    'data': [
-        'views/sale_view.xml',
-        'views/report_saleorder.xml',
-    ],
-    'installable': True,
-    'application': True,
-    'auto_install': False,
+    "data": ["views/sale_view.xml", "views/report_saleorder.xml"],
+    "installable": True,
+    "application": True,
+    "auto_install": False,
 }
