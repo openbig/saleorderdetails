@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # Copyright 2017 Carlos Dauden <carlos.dauden@tecnativa.com>
 # Copyright 2017 Thorsten Vocks <thorsten.vocks@openbig.org>
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
