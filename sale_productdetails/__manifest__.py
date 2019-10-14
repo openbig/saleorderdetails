@@ -21,12 +21,12 @@
 ##############################################################################
 {
     "name": "Detailed product description on Sale Order report.",
-    "version": "0.04 (12.0)",
+    "version": "0.05 (11.0)",
     "author": "Thorsten Vocks - OpenBIG.org, Maciej Wichowski - OpenGLOBE",
     "website": "https://www.openbig.org",
     "category": "Sale",
     "summary": "New report for Sale Order with detailed product description",
-    "depends": ["sale","purchase","web_tree_image_tooltip"],
+    "depends": ["sale","purchase","web_tree_image"],
     "description": """
 ====================
 Detailed description
