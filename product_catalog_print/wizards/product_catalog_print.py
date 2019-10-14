@@ -56,6 +56,6 @@ class ProductCatalogPrint(models.TransientModel):
             raise ValidationError(
                 _("You must set price list or any show price option.")
             )
-        return self.env["report"].get_action(
-            self, "product_catalog_print.report_product_catalog"
-        )
+        return self.env.ref(
+            'product_catalog_print.'
+            'action_report_product_catalog').report_action(self)

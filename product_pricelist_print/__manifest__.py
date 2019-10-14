@@ -6,12 +6,12 @@
     "name": "Product Pricelist Print",
     "summary": "Print price list from menu option, product templates, "
     "products variants or price lists - Customised Version",
-    "version": "9.0.1.0.0",
+    "version": "12.0.1.0.0",
     "category": "Product",
     "website": "http://www.openbig.org",
     "author": "OpenBIG.org, " "Tecnativa, " "Odoo Community Association (OCA)",
     "license": "AGPL-3",
-    "depends": ["product"],
+    "depends": ["product","purchase","sale"],
     "data": [
         "views/report_product_pricelist.xml",
         "wizards/product_pricelist_print_view.xml",

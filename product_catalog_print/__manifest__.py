@@ -7,12 +7,12 @@
     "summary": "Print product catalog with image, short name and detailed "
     "description from separate menu option, each product "
     "represents one single side in the printed product catalog.",
-    "version": "9.0.1.0.0",
+    "version": "12.0.1.0.0",
     "category": "Product",
     "website": "http://www.openbig.org",
     "author": "OpenBIG.org, " "Tecnativa, " "Odoo Community Association (OCA)",
     "license": "AGPL-3",
-    "depends": ["product"],
+    "depends": ["product","sale","purchase"],
     "data": [
         "views/report_product_catalog.xml",
         "wizards/product_catalog_print_view.xml",

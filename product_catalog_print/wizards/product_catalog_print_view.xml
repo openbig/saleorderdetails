@@ -80,6 +80,6 @@
     view_mode="form" target="new" view_type="form"/>
 
 <menuitem action="action_catalog_print" id="menu_product_catalog_print"
-    parent="base.menu_sales" sequence="300" groups="product.group_sale_pricelist"/>
+    parent="sale.product_menu_catalog" sequence="300" groups="product.group_sale_pricelist"/>
 
 </odoo>

@@ -1,4 +1,3 @@
-# -*- encoding: utf-8 -*-
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
@@ -22,12 +21,12 @@
 ##############################################################################
 {
     "name": "Detailed product description on Sale Order report.",
-    "version": "0.03 (9.0)",
+    "version": "0.04 (12.0)",
     "author": "Thorsten Vocks - OpenBIG.org, Maciej Wichowski - OpenGLOBE",
     "website": "https://www.openbig.org",
     "category": "Sale",
     "summary": "New report for Sale Order with detailed product description",
-    "depends": ["sale_layout", "web_tree_image"],
+    "depends": ["sale","purchase","web_tree_image_tooltip"],
     "description": """
 ====================
 Detailed description

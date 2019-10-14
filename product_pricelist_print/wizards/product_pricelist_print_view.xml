@@ -79,6 +79,6 @@
     view_mode="form" target="new" view_type="form"/>
 
 <menuitem action="action_pricelist_print" id="menu_product_pricelist_print"
-    parent="base.menu_sales" sequence="200" groups="product.group_sale_pricelist"/>
+    parent="sale.product_menu_catalog" sequence="200" groups="product.group_sale_pricelist"/>
 
 </odoo>

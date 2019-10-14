@@ -59,6 +59,6 @@ class ProductPricelistPrint(models.TransientModel):
             raise ValidationError(
                 _("You must set price list or any show price option.")
             )
-        return self.env["report"].get_action(
-            self, "product_pricelist_print.report_product_pricelist"
-        )
+        return self.env.ref(
+            'product_pricelist_print.'
+            'action_report_product_pricelist').report_action(self)
